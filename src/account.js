@@ -8,7 +8,7 @@ module.exports = class Account {
   deposit = (amount) => {
     this.balance += amount;
     var date = new Date()
-    this.transactions[date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() ] = amount;
+    this.transactions[date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()] = amount;
   }
 
   withdraw = (amount) => {
@@ -16,6 +16,8 @@ module.exports = class Account {
       throw 'Insufficient funds';
     }
     this.balance -= amount;
+    var date = new Date()
+    this.transactions[date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()] = -amount;
   }
 
 };
