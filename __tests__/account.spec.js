@@ -17,9 +17,9 @@ describe('Account class', () => {
 
 });
 
-// describe('Deposit', () => {
-//   test('you can make a deposit', () => {
-//     account.deposit(10)
-//     expect(account.balance).toEqual(10);
-//   })
-// })
+describe('Deposit', () => {
+  test('you can make a deposit', () => {
+    account.deposit(10)
+    expect(account.balance).toEqual(10);
+  })
+})
