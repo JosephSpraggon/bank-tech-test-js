@@ -1,10 +1,9 @@
-const Account = require('../src/account');
 
+const Account = require('../src/account');
 
 beforeEach(() => {
   account = new Account;
 })
-
 
 describe('Account class', () => {
 
@@ -14,6 +13,11 @@ describe('Account class', () => {
 
   test('should initialize with a default balance of zero', () => {
     expect(account.balance).toEqual(0);
+  })
+
+  test('should keep record of transactions', () => {
+    account.deposit(100);
+    expect(account.transactions).toEqual({"25/4/2021": 100});
   })
 
 });
