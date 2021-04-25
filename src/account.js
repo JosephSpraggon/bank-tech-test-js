@@ -8,4 +8,11 @@ module.exports = class Account {
     this.balance += amount;
   }
 
+  withdraw = (amount) => {
+    if(this.balance - amount < 0){
+      throw 'Insufficient funds';
+    }
+    this.balance -= amount;
+  }
+
 };
