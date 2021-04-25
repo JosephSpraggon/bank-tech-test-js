@@ -62,3 +62,13 @@ describe('#withdraw', () => {
   })
 
 })
+
+describe('#print', () => {
+
+  test('you can print transactions', () => {
+    account.deposit(100)
+    account.withdraw(10)
+    expect(account.print()).toEqual({"Day/Month1/Year Hour:Min:Sec": 100, "Day/Month1/Year Hour:Min:Sec": -10});
+  })
+
+})

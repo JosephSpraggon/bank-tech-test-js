@@ -20,4 +20,8 @@ module.exports = class Account {
     this.transactions[date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()] = -amount;
   }
 
+  print = () => {
+   return this.transactions;
+  }
+
 };
